@@ -26,7 +26,7 @@ export class BodyEjercicioComponent implements OnInit {
   ngOnInit() {
     this.objetoUsuario.push(
       {
-        nombre: 'raul'
+        nombre: 'raul11'
       },
       {
         nombre: 'nicolas'
