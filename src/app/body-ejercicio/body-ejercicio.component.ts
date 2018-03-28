@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IngresarNombreService } from '../servicios/compartidos/ingresar-nombre.service';
+
 export interface Usuarios {
+  id?:number;
   nombre: string;
 }
 
@@ -9,12 +12,17 @@ export interface Usuarios {
   styleUrls: ['./body-ejercicio.component.css']
 })
 export class BodyEjercicioComponent implements OnInit {
+  @Output() valorEnviarDesdePapa: EventEmitter<any> = new EventEmitter();
+
   public objetoUsuario: Usuarios[] = [];
   public objetoUsuario1: Usuarios[] = [];
   public objetoUsuario2: Usuarios[] = [];
 
-  constructor() {
-   
+  constructor(public IngresarNombreService: IngresarNombreService) {
+   this.IngresarNombreService.obtenerValor().subscribe((data:any) => {
+    this.objetoUsuario.push({nombre: data});
+    (<HTMLInputElement>document.getElementById('enviar_valor')).value = '';
+   })
   }
 
   ngOnInit() {
@@ -40,5 +48,11 @@ export class BodyEjercicioComponent implements OnInit {
       {
         nombre: 'wilmer'
       });
+  }
+
+  clickFila(idLlega: number, nombreLlega: string){
+    let objeto: Usuarios[] = [];
+    objeto.push({id: idLlega + 1, nombre: nombreLlega})
+    this.valorEnviarDesdePapa.emit(objeto);
   }
 }

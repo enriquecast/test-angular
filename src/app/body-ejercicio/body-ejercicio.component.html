@@ -13,7 +13,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor='let usuario of objetoUsuario; let i=index'>
+                    <tr *ngFor='let usuario of objetoUsuario; let i=index' (click)='clickFila(i, usuario.nombre)'>
                         <th scope="row">{{i+1}}</th>
                         <td>{{usuario.nombre}}</td>
                     </tr>
@@ -24,4 +24,10 @@
 
     </div>
 
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <app-body-child [seleccionado]='valorEnviarDesdePapa'></app-body-child>
+    </div>
 </div>
