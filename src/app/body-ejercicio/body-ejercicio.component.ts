@@ -15,6 +15,8 @@ export class BodyEjercicioComponent implements OnInit {
   @Output() valorEnviarDesdePapa: EventEmitter<any> = new EventEmitter();
 
   public objetoUsuario: Usuarios[] = [];
+  public objetoUsuario1: Usuarios[] = [];
+  public objetoUsuario2: Usuarios[] = [];
 
   constructor(public IngresarNombreService: IngresarNombreService) {
    this.IngresarNombreService.obtenerValor().subscribe((data:any) => {
@@ -27,6 +29,15 @@ export class BodyEjercicioComponent implements OnInit {
     this.objetoUsuario.push(
       {
         nombre: 'raul11ghgf'
+      },
+      {
+        nombre: 'jesus'
+      },
+      {
+        nombre: 'david'
+      },
+      {
+        nombre: 'alexis'
       },
       {
         nombre: 'nicolas'
