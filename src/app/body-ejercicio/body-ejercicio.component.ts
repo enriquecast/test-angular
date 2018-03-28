@@ -21,6 +21,15 @@ export class BodyEjercicioComponent implements OnInit {
         nombre: 'raul'
       },
       {
+        nombre: 'jesus'
+      },
+      {
+        nombre: 'david'
+      },
+      {
+        nombre: 'alexis'
+      },
+      {
         nombre: 'nicolas'
       },
       {
