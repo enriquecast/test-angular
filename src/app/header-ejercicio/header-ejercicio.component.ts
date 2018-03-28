@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, } from '@angular/core';
+import { IngresarNombreService } from '../servicios/compartidos/ingresar-nombre.service';
 
 
 @Component({
@@ -9,10 +10,11 @@ import { Component, OnInit, Output, EventEmitter, } from '@angular/core';
 export class HeaderEjercicioComponent implements OnInit {
   public valor: string = '';
 
-  constructor() { }
+  constructor(public ingresarNombreService: IngresarNombreService) { }
 
   cargarNombre(){
-    
+    this.ingresarNombreService.asignarValor(this.valor);
+    // this.valor = ''
   }
 
   ngOnInit() {

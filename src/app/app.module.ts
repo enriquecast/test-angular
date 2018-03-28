@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { EjercicioComponent } from './primer-ejercicio/ejercicio.components';
@@ -10,6 +10,8 @@ import { ContainerEjercicioComponent } from './container-ejercicio/container-eje
 import { HeaderEjercicioComponent } from './header-ejercicio/header-ejercicio.component';
 import { BodyEjercicioComponent } from './body-ejercicio/body-ejercicio.component';
 import { FooterEjercicioComponent } from './footer-ejercicio/footer-ejercicio.component';
+import { IngresarNombreService } from './servicios/compartidos/ingresar-nombre.service';
+import { BodyChildComponent } from './body-child/body-child.component';
 
 
 @NgModule({
@@ -20,15 +22,16 @@ import { FooterEjercicioComponent } from './footer-ejercicio/footer-ejercicio.co
     ContainerEjercicioComponent,
     HeaderEjercicioComponent,
     BodyEjercicioComponent,
-    FooterEjercicioComponent
+    FooterEjercicioComponent,
+    BodyChildComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     FormsModule,
-    
+
   ],
-  providers: [],
+  providers: [IngresarNombreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
