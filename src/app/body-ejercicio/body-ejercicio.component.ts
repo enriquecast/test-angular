@@ -10,6 +10,8 @@ export interface Usuarios {
 })
 export class BodyEjercicioComponent implements OnInit {
   public objetoUsuario: Usuarios[] = [];
+  public objetoUsuario1: Usuarios[] = [];
+  public objetoUsuario2: Usuarios[] = [];
 
   constructor() {
    
