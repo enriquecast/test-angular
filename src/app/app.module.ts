@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import {CommonModule} from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { EjercicioComponent } from './primer-ejercicio/ejercicio.components';
@@ -22,7 +23,10 @@ import { FooterEjercicioComponent } from './footer-ejercicio/footer-ejercicio.co
     FooterEjercicioComponent
   ],
   imports: [
-    BrowserModule
+    CommonModule,
+    BrowserModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

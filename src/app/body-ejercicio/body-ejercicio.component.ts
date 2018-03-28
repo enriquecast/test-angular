@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+export interface Usuarios {
+  nombre: string;
+}
 
 @Component({
   selector: 'app-body-ejercicio',
@@ -6,10 +9,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./body-ejercicio.component.css']
 })
 export class BodyEjercicioComponent implements OnInit {
+  public objetoUsuario: Usuarios[] = [];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
+   
   }
 
+  ngOnInit() {
+    this.objetoUsuario.push(
+      {
+        nombre: 'raul'
+      },
+      {
+        nombre: 'nicolas'
+      },
+      {
+        nombre: 'juan'
+      },
+      {
+        nombre: 'wilmer'
+      });
+  }
 }

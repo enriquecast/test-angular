@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SegundoEjercicioComponent implements OnInit {
   public model: any;
 
-  constructor() { }
+  constructor() { } 
 
   ngOnInit() {
     this.model = 'Hola Mundo...'

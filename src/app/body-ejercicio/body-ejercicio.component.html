@@ -9,13 +9,13 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Mombre</th>
+                        <th scope="col">Nombre</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
+                    <tr *ngFor='let usuario of objetoUsuario; let i=index'>
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{usuario.nombre}}</td>
                     </tr>
                 </tbody>
 
