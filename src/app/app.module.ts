@@ -12,6 +12,7 @@ import { BodyEjercicioComponent } from './body-ejercicio/body-ejercicio.componen
 import { FooterEjercicioComponent } from './footer-ejercicio/footer-ejercicio.component';
 import { IngresarNombreService } from './servicios/compartidos/ingresar-nombre.service';
 import { BodyChildComponent } from './body-child/body-child.component';
+import { NavbarEjercicioComponent } from './navbar-ejercicio/navbar-ejercicio.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { BodyChildComponent } from './body-child/body-child.component';
     HeaderEjercicioComponent,
     BodyEjercicioComponent,
     FooterEjercicioComponent,
-    BodyChildComponent
+    BodyChildComponent,
+    NavbarEjercicioComponent
   ],
   imports: [
     CommonModule,
