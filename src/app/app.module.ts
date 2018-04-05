@@ -13,6 +13,11 @@ import { FooterEjercicioComponent } from './footer-ejercicio/footer-ejercicio.co
 import { IngresarNombreService } from './servicios/compartidos/ingresar-nombre.service';
 import { BodyChildComponent } from './body-child/body-child.component';
 import { NavbarEjercicioComponent } from './navbar-ejercicio/navbar-ejercicio.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ContainterEjercicioDosComponent } from './containter-ejercicio-dos/containter-ejercicio-dos.component';
+import { ContainerEjercicioTresComponent } from './container-ejercicio-tres/container-ejercicio-tres.component';
+import { ContainerEjercicioCuatroComponent } from './container-ejercicio-cuatro/container-ejercicio-cuatro.component';
+
 
 
 @NgModule({
@@ -25,13 +30,16 @@ import { NavbarEjercicioComponent } from './navbar-ejercicio/navbar-ejercicio.co
     BodyEjercicioComponent,
     FooterEjercicioComponent,
     BodyChildComponent,
-    NavbarEjercicioComponent
+    NavbarEjercicioComponent,
+    ContainterEjercicioDosComponent,
+    ContainerEjercicioTresComponent,
+    ContainerEjercicioCuatroComponent,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     FormsModule,
-
+    AppRoutingModule
   ],
   providers: [IngresarNombreService],
   bootstrap: [AppComponent]
